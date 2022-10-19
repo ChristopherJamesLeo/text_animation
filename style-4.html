@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>style-4</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:100,200,300,400,500,600,700,800,900');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+        .content {
+            position: relative;
+        }
+        .content h2{
+            position: absolute;
+            color: #fff;
+            transform: translate(-50% , -50%);
+            font-size: 8em;
+        }
+        .content h2:nth-child(1){
+            color: transparent;
+            -webkit-text-stroke: 2px #03a9f4;
+            /* animation: animate 4s ease-in-out infinite; */
+        }
+        .content h2:nth-child(2){
+            color: #03a9f4;
+            -webkit-text-stroke: 2px #03a9f4;
+            animation: animate 4s ease-in-out infinite;
+        }
+        @keyframes animate {
+            0%,100%{
+                clip-path: polygon(0 53%, 11% 44%, 26% 42%, 40% 47%, 51% 56%, 65% 60%, 80% 60%, 93% 55%, 100% 50%, 100% 100%, 0% 100%);
+            }
+            50%{
+                clip-path: polygon(0 46%, 9% 54%, 25% 60%, 39% 58%, 49% 52%, 61% 46%, 72% 42%, 85% 40%, 100% 39%, 100% 100%, 0% 100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Water</h2>
+        <h2>Water</h2>
+    </div>
+</body>
+</html>
